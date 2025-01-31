@@ -1,3 +1,8 @@
+// Ensure jQuery is included
+if (typeof jQuery == 'undefined') {
+  throw new Error('jQuery is not loaded. Please include jQuery before this script.');
+}
+
 var canvas = document.querySelector("#wrapper-canvas");
 
 var dimensions = {
@@ -199,15 +204,20 @@ function debounce(func, wait, immediate) {
 }
 
 function setWindowSize() {
-  let dimensions = {};
-  dimensions.width = $(window).width();
-  dimensions.height = $(window).height();
-
-  m.render.canvas.width = $(window).width();
-  m.render.canvas.height = $(window).height();
-  return dimensions;
+  const canvas = document.querySelector('canvas');
+  if (canvas) {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
 }
 
-let m = runMatter();
-setWindowSize();
-$(window).resize(debounce(setWindowSize, 250));
+document.addEventListener('DOMContentLoaded', () => {
+  setWindowSize();
+  window.addEventListener('resize', setWindowSize);
+});
+
+$(document).ready(function() {
+  let m = runMatter();
+  setWindowSize();
+  $(window).resize(debounce(setWindowSize, 250));
+});
