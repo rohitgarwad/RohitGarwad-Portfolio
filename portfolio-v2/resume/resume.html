@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Garwad - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1788ae;
+            --accent: #0ea5e9;
+            --text: #1a1a2e;
+            --muted: #64748b;
+            --border: #e2e8f0;
+            --bg: #ffffff;
+            --light-bg: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.5;
+            font-size: 10pt;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+        }
+
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.4in 0.5in;
+        }
+
+        /* Header - Compact & Impactful */
+        header {
+            text-align: center;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--primary);
+            background: linear-gradient(180deg, var(--light-bg) 0%, var(--bg) 100%);
+            margin: -0.4in -0.5in 14px -0.5in;
+            padding: 0.4in 0.5in 12px 0.5in;
+        }
+
+        h1 {
+            font-size: 26pt;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 3px;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 10pt;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .contact-info {
+            font-size: 9pt;
+            color: var(--muted);
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Sections - Tighter spacing */
+        section {
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            font-size: 11pt;
+            font-weight: 700;
+            color: var(--bg);
+            background: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            padding: 4px 10px;
+            margin-bottom: 8px;
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-size: 10pt;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1px;
+        }
+
+        .subtitle {
+            font-size: 9pt;
+            color: var(--muted);
+            margin-bottom: 3px;
+        }
+
+        /* Summary - Impactful */
+        .summary {
+            font-size: 9.5pt;
+            color: var(--text);
+            text-align: justify;
+            line-height: 1.5;
+            background: var(--light-bg);
+            padding: 8px 10px;
+            border-left: 3px solid var(--primary);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .summary strong {
+            color: var(--primary);
+        }
+
+        /* Skills - Compact grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            gap: 3px 12px;
+            font-size: 9pt;
+        }
+
+        .skill-category {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .skill-items {
+            color: var(--text);
+        }
+
+        /* Experience & Projects - Compact */
+        .job,
+        .project {
+            margin-bottom: 8px;
+            padding-left: 8px;
+            border-left: 2px solid var(--border);
+        }
+
+        .job-header,
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .date {
+            font-size: 8pt;
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        .tech-stack {
+            font-size: 8pt;
+            color: var(--primary);
+            font-weight: 600;
+            background: var(--light-bg);
+            padding: 1px 6px;
+            border-radius: 3px;
+        }
+
+        ul {
+            padding-left: 16px;
+            margin-top: 3px;
+        }
+
+        li {
+            font-size: 9pt;
+            margin-bottom: 2px;
+        }
+
+        /* Education - Two column */
+        .edu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .edu-item {
+            padding: 6px 8px;
+            background: var(--light-bg);
+            border-radius: 4px;
+        }
+
+        .gpa {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 10pt;
+        }
+
+        /* Certifications - Three column */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px 15px;
+            font-size: 8.5pt;
+        }
+
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .cert-item::before {
+            content: "✓";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Achievements - Horizontal badges */
+        .achievements {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .achievement {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 9pt;
+            background: linear-gradient(135deg, var(--light-bg) 0%, #fff 100%);
+            padding: 4px 10px;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .achievement-icon {
+            font-size: 11pt;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                font-size: 9.5pt;
+            }
+
+            .container {
+                padding: 0.35in 0.45in;
+            }
+
+            header {
+                margin: -0.35in -0.45in 12px -0.45in;
+                padding: 0.35in 0.45in 10px 0.45in;
+            }
+
+            @page {
+                margin: 0.4in 0 0 0;
+                size: letter;
+            }
+
+            @page :first {
+                margin: 0;
+            }
+
+            /* Prevent page breaks inside elements */
+            section {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            .job,
+            .project,
+            .edu-item {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+
+            h2,
+            h3 {
+                page-break-after: avoid;
+                break-after: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>ROHIT GARWAD</h1>
+            <div class="tagline">Full-Stack Developer • AI/GenAI Engineer • Agentic AI • Java • React • Python</div>
+            <div class="contact-info">
+                Hyderabad, India | +91 8977322141 |
+                <a href="mailto:rohitgarwad@gmail.com">rohitgarwad@gmail.com</a> |
+                <a href="https://rohitgarwad.vercel.app">Portfolio</a> |
+                <a href="https://github.com/rohitgarwad">GitHub</a> |
+                <a href="https://linkedin.com/in/rohit-garwad">LinkedIn</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p class="summary">
+                Full-stack and AI engineer with hands-on experience building <strong>Agentic AI applications</strong>,
+                LLM-powered systems, and end-to-end web platforms. Skilled in designing modular AI agents, RAG
+                pipelines,
+                serverless automation, and scalable backend APIs using <strong>Java, React, Python, LangChain</strong>.
+                Recognized for rapid learning, problem-solving (<strong>5-Star HackerRank</strong>), and delivering
+                production-ready code.
+            </p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-category">AI & GenAI</span>
+                <span class="skill-items">LangChain, LangGraph, LLMs, RAG, Vector DBs (FAISS/Chroma), Agentic AI,
+                    Streamlit, CrewAI</span>
+
+                <span class="skill-category">Languages</span>
+                <span class="skill-items">Java, JavaScript, Python, TypeScript</span>
+
+                <span class="skill-category">Frontend</span>
+                <span class="skill-items">React.js, Next.js, Redux, Tailwind CSS, MUI, Shadcn UI</span>
+
+                <span class="skill-category">Backend</span>
+                <span class="skill-items">Spring Boot, Node.js, Express.js, REST APIs, WebSockets</span>
+
+                <span class="skill-category">Databases</span>
+                <span class="skill-items">MySQL, PostgreSQL, MongoDB, Vector DBs</span>
+
+                <span class="skill-category">DevOps</span>
+                <span class="skill-items">AWS, Git, GitHub, Docker, CI/CD, Linux</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="job">
+                <div class="job-header">
+                    <h3>Software Development Intern — Edunet Foundation</h3>
+                    <span class="date">Nov 2023 – Apr 2024</span>
+                </div>
+                <ul>
+                    <li>Built a <strong>full-stack web application</strong> (React + Spring Boot) as part of an internal
+                        capstone project</li>
+                    <li>Developed <strong>REST APIs</strong> and integrated MySQL/MongoDB, improving backend reliability
+                    </li>
+                    <li>Enhanced UI responsiveness using <strong>Tailwind CSS and Redux</strong></li>
+                </ul>
+                <div class="tech-stack">React • Spring Boot • Node.js • MySQL • MongoDB • Tailwind CSS</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>App-Builder — AI Agent System</h3>
+                    <span class="tech-stack">Python • LangChain • LangGraph</span>
+                </div>
+                <ul>
+                    <li>Built an <strong>AI-powered application generator</strong> producing multi-file project
+                        structures automatically</li>
+                    <li>Designed modular agent workflows with tool integrations for planning, architecture, and coding
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>AI-Powered Image Analysis Pipeline</h3>
+                    <span class="tech-stack">Python • AWS Lambda • Streamlit</span>
+                </div>
+                <ul>
+                    <li>Built serverless image analysis pipeline, reducing per-image processing time by
+                        <strong>70%+</strong>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <h3>Project Management System</h3>
+                    <span class="tech-stack">React • Spring Boot • WebSocket • MySQL</span>
+                </div>
+                <ul>
+                    <li>Full-stack tool with <strong>role-based access</strong>, task tracking, and real-time updates
+                    </li>
+                </ul>
+            </div>
+
+            <p style="font-size: 8pt; color: var(--muted); margin-top: 5px;">
+                <strong>Also:</strong> Cold Mail Generator, Expense Tracker, Gmail Clone, REST Countries API, QR Code
+                Service, 57+ GitHub repositories
+            </p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="edu-grid">
+                <div class="edu-item">
+                    <h3>MSc Computer Science</h3>
+                    <div class="subtitle">A.V. College, Hyderabad | 2022–2024</div>
+                    <div><span class="gpa">GPA: 8.31</span> • First-year Topper</div>
+                </div>
+                <div class="edu-item">
+                    <h3>BSc MECs</h3>
+                    <div class="subtitle">Pragati Mahavidyalaya, Hyderabad | 2019–2022</div>
+                    <div><span class="gpa">GPA: 9.07</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <div class="cert-grid">
+                <span class="cert-item">Applied Cloud Computing — Microsoft</span>
+                <span class="cert-item">Database Programming with SQL — Oracle</span>
+                <span class="cert-item">Front End Libraries — freeCodeCamp</span>
+                <span class="cert-item">Back End APIs — freeCodeCamp</span>
+                <span class="cert-item">JS Algorithms & DS — freeCodeCamp</span>
+                <span class="cert-item">Responsive Web Design — freeCodeCamp</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Achievements</h2>
+            <div class="achievements">
+                <div class="achievement">
+                    <span class="achievement-icon">🏆</span>
+                    <strong>First-Year Topper</strong>, MSc CS
+                </div>
+                <div class="achievement">
+                    <span class="achievement-icon">⭐</span>
+                    <strong>5-Star Gold Badge</strong>, HackerRank
+                </div>
+                <div class="achievement">
+                    <span class="achievement-icon">💻</span>
+                    <strong>57+ GitHub Repositories</strong>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

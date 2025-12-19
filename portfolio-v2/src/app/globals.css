@@ -1,0 +1,315 @@
+@import "tailwindcss";
+
+/* Dark theme (default) */
+:root,
+[data-theme="dark"] {
+  --background: #111111;
+  --foreground: #ffffff;
+
+  /* Brand colors - Orange/Red gradient */
+  --primary: #ff6b35;
+  --primary-dark: #a72900;
+  --primary-light: #ff9f1c;
+
+  /* Accent - Teal */
+  --accent: #1788ae;
+  --accent-light: #20a4d4;
+  --accent-dark: #126a8a;
+
+  /* Text colors */
+  --muted: #b0b2c3;
+  --muted-dark: #999999;
+  --card: #1a1a1a;
+  --card-hover: #222222;
+  --border: #444444;
+}
+
+/* Light theme */
+[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #111111;
+
+  /* Brand colors stay the same */
+  --primary: #ff6b35;
+  --primary-dark: #a72900;
+  --primary-light: #ff9f1c;
+
+  /* Accent stays the same */
+  --accent: #1788ae;
+  --accent-light: #20a4d4;
+  --accent-dark: #126a8a;
+
+  /* Adjusted text colors for light mode */
+  --muted: #666666;
+  --muted-dark: #888888;
+  --card: #f5f5f5;
+  --card-hover: #eeeeee;
+  --border: #dddddd;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-nunito), system-ui, sans-serif;
+}
+
+/* Box sizing only - don't override padding/margin, let Tailwind handle it */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-nunito), system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-nunito), system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--foreground);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(to right, orange, #a72900);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Gradient background */
+.gradient-bg {
+  background: linear-gradient(to right, orange, #a72900);
+}
+
+/* Gradient border */
+.gradient-border {
+  position: relative;
+  background: var(--background);
+  z-index: 1;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(to right, orange, #a72900);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* Glass effect for header */
+.glass {
+  background: rgba(17, 17, 17, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+[data-theme="light"] .glass {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Tech Tags */
+.tech-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  font-size: 14px;
+  color: var(--muted);
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+/* Selection */
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* Gradient Border Animation for HolographicCard */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ========================================
+   LIGHT MODE OVERRIDES
+   ======================================== */
+
+/* Hero Section - Light Mode */
+[data-theme="light"] .text-white {
+  color: var(--foreground);
+}
+
+[data-theme="light"] .text-\[var\(--muted\)\] {
+  color: #555555;
+}
+
+/* Particle Background - Reduced opacity in light mode */
+[data-theme="light"] canvas {
+  opacity: 0.15 !important;
+}
+
+/* Skill Cloud Tags - Light mode adjustments */
+[data-theme="light"] .tech-tag {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: var(--foreground);
+}
+
+[data-theme="light"] .tech-tag:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Contact Form - Light mode */
+[data-theme="light"] .bg-white\/5 {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="light"] .bg-black\/20 {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .placeholder-white\/20::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Social Icons - Light mode */
+[data-theme="light"] a.text-\[var\(--muted\)\]:hover {
+  color: var(--primary);
+}
+
+/* Holographic Card Glow - Boost in light mode to match dark mode visual impact */
+[data-theme="light"] .blur-\[60px\] {
+  opacity: 0.4 !important;
+  filter: blur(80px) saturate(1.5) !important;
+}
+
+[data-theme="light"] .group:hover .blur-\[60px\] {
+  opacity: 0.7 !important;
+  filter: blur(80px) saturate(2) !important;
+}
+
+/* Header in light mode */
+[data-theme="light"] header {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Achievements section in light mode */
+[data-theme="light"] .bg-black\/40 {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="light"] .backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+}
+
+/* Form labels in light mode */
+[data-theme="light"] label.text-sm {
+  color: #333333;
+}
+
+/* Contact form inputs - better visibility in light mode */
+[data-theme="light"] input.bg-black\/20,
+[data-theme="light"] textarea.bg-black\/20 {
+  background: rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+  color: #222222 !important;
+}
+
+[data-theme="light"] input.bg-black\/20::placeholder,
+[data-theme="light"] textarea.bg-black\/20::placeholder {
+  color: rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="light"] input.bg-black\/20:focus,
+[data-theme="light"] textarea.bg-black\/20:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px rgba(23, 136, 174, 0.2) !important;
+}
+
+/* ========================================
+   MOBILE & TOUCH DEVICE OPTIMIZATIONS
+   ======================================== */
+
+/* Reduce particle background on mobile for performance */
+@media (max-width: 768px) {
+  canvas {
+    opacity: 0.3 !important;
+  }
+
+  /* Simplify skill cloud on mobile */
+  .skill-cloud-tag {
+    animation-duration: 10s !important;
+  }
+}
+
+/* Disable 3D transforms on touch devices for better UX */
+@media (hover: none) and (pointer: coarse) {
+
+  /* Disable 3D tilt on cards */
+  [style*="transform-style: preserve-3d"] {
+    transform: none !important;
+  }
+
+  /* Reduce glow intensity for battery */
+  .blur-\[60px\] {
+    opacity: 0.2 !important;
+    filter: blur(40px) !important;
+  }
+}
