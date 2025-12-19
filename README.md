@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rohit Garwad - Portfolio
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js 15, featuring AI/GenAI expertise showcase, interactive animations, and a premium design aesthetic.
 
-First, run the development server:
+![Portfolio Preview](public/images/og-image.png)
+
+## 🌐 Live Demo
+
+**[rohitgarwad.vercel.app](https://rohitgarwad.vercel.app)**
+
+## ✨ Features
+
+- **Modern Stack**: Next.js 15, React 19, TypeScript, TailwindCSS v4
+- **Responsive Design**: Optimized for all devices
+- **Dark/Light Mode**: Theme toggle with system preference detection
+- **Interactive UI**: Framer Motion animations, 3D card effects
+- **Achievements Carousel**: Touch-enabled swipe navigation
+- **Contact Form**: Formspree integration with validation
+- **SEO Optimized**: Open Graph, Twitter Cards, JSON-LD structured data
+- **Performance**: Lighthouse optimized, image optimization
+
+## 🛠️ Tech Stack
+
+| Category | Technologies |
+|----------|-------------|
+| **Framework** | Next.js 15 (App Router) |
+| **Styling** | TailwindCSS v4, CSS Variables |
+| **Animation** | Framer Motion |
+| **Icons** | Lucide React |
+| **Forms** | Formspree |
+| **Deployment** | Vercel |
+
+## 🚀 Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── src/
+│   ├── app/           # Next.js app router pages
+│   ├── components/    # React components
+│   │   ├── layout/    # Header, Footer
+│   │   ├── sections/  # Hero, Projects, About, etc.
+│   │   └── ui/        # Reusable UI components
+│   ├── context/       # Theme context
+│   ├── data/          # Static data (projects, skills)
+│   └── lib/           # Utility functions
+├── public/            # Static assets
+└── resume/            # Resume system (MD + HTML)
+```
 
-## Learn More
+## 📄 Resume System
 
-To learn more about Next.js, take a look at the following resources:
+The portfolio includes a maintainable resume system:
+- Edit `resume/resume.md` for content
+- Open `resume/resume.html` in Chrome → Print → Save as PDF
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📬 Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Email**: rohitgarwad@gmail.com
+- **LinkedIn**: [linkedin.com/in/rohit-garwad](https://linkedin.com/in/rohit-garwad)
+- **GitHub**: [github.com/rohitgarwad](https://github.com/rohitgarwad)
 
-## Deploy on Vercel
+## 📝 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License - feel free to use this as inspiration for your own portfolio!
