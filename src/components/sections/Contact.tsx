@@ -120,8 +120,6 @@ export default function Contact() {
                             </div>
                         </div>
 
-
-
                         {/* Social Links */}
                         <div className="pt-8">
                             <div className="flex items-center gap-3 mb-6">

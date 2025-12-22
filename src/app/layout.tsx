@@ -3,6 +3,7 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import AnimatedCursor from "@/components/ui/AnimatedCursor";
 import { ThemeProvider } from "@/context/ThemeContext";
 
 const nunito = Nunito({
@@ -70,8 +71,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${nunito.variable} antialiased`}>
+      <body className={`${nunito.variable} antialiased cursor-none`}>
         <ThemeProvider>
+          <AnimatedCursor />
           <Header />
           <main>{children}</main>
           <Footer />

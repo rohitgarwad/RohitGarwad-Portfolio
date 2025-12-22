@@ -13,11 +13,11 @@ export interface Project {
 
 export const projects: Project[] = [
     {
-        id: "coder-buddy",
-        title: "Coder Buddy (App-Builder)",
-        shortTitle: "Coder Buddy",
+        id: "app-builder",
+        title: "AI-Driven Project Builder",
+        shortTitle: "App-Builder",
         description:
-            "An AI-powered coding assistant with multi-agent architecture. Features Planner Agent (analyzes requests, generates project plans), Architect Agent (breaks down into engineering tasks), and Coder Agent (implements tasks, writes files). Includes CLI and Web UI interfaces.",
+            "A modular, dependency-aware, parallel-executing project generator powered by LLMs. Takes natural-language prompts and orchestrates AI agents (Planner → Architect → Coder) to write code file-by-file. Features Web UI, multi-LLM support (Groq, OpenAI, Gemini), project templates, and incremental builds.",
         tags: [
             "python",
             "langchain",
@@ -25,8 +25,8 @@ export const projects: Project[] = [
             "multi-agent",
             "llm",
             "genai",
-            "ai-agents",
-            "streamlit",
+            "fastapi",
+            "react",
         ],
         image: "/images/project-display-images/app-builder-display.png",
         githubUrl: "https://github.com/rohitgarwad/App-Builder",

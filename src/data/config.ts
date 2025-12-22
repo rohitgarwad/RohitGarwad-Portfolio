@@ -4,7 +4,7 @@ export const siteConfig = {
   title: "Java Full Stack & AI Developer",
   description: "I build intelligent web applications and AI-powered solutions using modern technologies. Specialized in Java Full Stack development and Generative AI applications with LangChain, CrewAI, and LLMs.",
   email: "rohitgarwad@gmail.com",
-  phone: "+916303071960",
+  phone: "+918977322141",
   location: "India",
   resumeUrl: "/resume.pdf",
   social: {
