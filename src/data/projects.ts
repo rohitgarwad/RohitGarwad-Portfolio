@@ -118,6 +118,50 @@ export const projects: Project[] = [
         color: "#EC4899",
     },
     {
+        id: "log-classification",
+        title: "Log Classification System",
+        shortTitle: "Log Classification",
+        description:
+            "Hybrid log classification system combining Regex, Sentence Transformers + Logistic Regression, and LLMs. Handles varying pattern complexities with FastAPI backend for real-time classification.",
+        tags: ["python", "fastapi", "sentence-transformers", "logistic-regression", "llm", "ml"],
+        image: "/images/project-display-images/project-management-system-display.png",
+        githubUrl: "https://github.com/rohitgarwad/Logs-Classification",
+        color: "#6366F1",
+    },
+    {
+        id: "atliq-tshirts",
+        title: "AtliQ Tees: Database Q&A",
+        shortTitle: "Database Q&A",
+        description:
+            "LLM-powered system that talks to MySQL database. Users ask questions in natural language, and the system converts them to SQL queries using Google Palm, LangChain, and few-shot learning.",
+        tags: ["python", "langchain", "google-palm", "mysql", "streamlit", "chromadb", "few-shot"],
+        image: "/images/project-display-images/project-management-system-display.png",
+        githubUrl: "https://github.com/rohitgarwad/langchain",
+        color: "#14B8A6",
+    },
+    {
+        id: "news-research-tool",
+        title: "RockyBot: News Research Tool",
+        shortTitle: "News Research Tool",
+        description:
+            "News research tool for stock market insights. Load article URLs, process with LangChain, build FAISS vector index, and query with ChatGPT to get answers with source citations.",
+        tags: ["python", "langchain", "openai", "faiss", "streamlit", "rag", "embeddings"],
+        image: "/images/project-display-images/project-management-system-display.png",
+        githubUrl: "https://github.com/rohitgarwad/langchain",
+        color: "#F97316",
+    },
+    {
+        id: "food-chatbot",
+        title: "Food Ordering Chatbot",
+        shortTitle: "Food Chatbot",
+        description:
+            "End-to-end food ordering chatbot using Dialogflow for NLU, FastAPI backend, and MySQL database. Handles order placement, tracking, and inventory management through natural conversation.",
+        tags: ["python", "dialogflow", "fastapi", "mysql", "nlp", "chatbot"],
+        image: "/images/project-display-images/project-management-system-display.png",
+        githubUrl: "https://github.com/rohitgarwad/Food-Chatbot",
+        color: "#EF4444",
+    },
+    {
         id: "diwali-greetings",
         title: "Diwali Greetings",
         shortTitle: "Diwali Greetings",
