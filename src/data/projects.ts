@@ -77,7 +77,7 @@ export const projects: Project[] = [
         title: "Project Management System",
         shortTitle: "Project Management System",
         description:
-            "A PG level final year college project. Solely built the complete site from scratch. Helpful for streamlining and managing software projects with real-time updates.",
+            "Full-stack project management platform with role-based access control, real-time task tracking via WebSockets, team collaboration features, and interactive dashboards. Built as MSc final year project with React frontend and Spring Boot backend.",
         tags: [
             "react.js",
             "spring boot",
@@ -91,7 +91,7 @@ export const projects: Project[] = [
         ],
         image: "/images/project-display-images/project-management-system-display.png",
         liveUrl: "https://pms-client-project.vercel.app",
-        githubUrl: "https://github.com/rohitgarwad",
+        githubUrl: "https://github.com/rohitgarwad/Project-Management-System",
         color: "#fc815c",
         featured: true,
     },
@@ -102,7 +102,7 @@ export const projects: Project[] = [
         description:
             "An application that leverages AI for intelligent image analysis and processing capabilities.",
         tags: ["python", "ai", "image-analysis", "computer-vision"],
-        image: "/images/project-display-images/project-management-system-display.png",
+        image: "/images/project-display-images/ai-powered-image-analysis-display.png",
         githubUrl: "https://github.com/rohitgarwad/AI-Powered-Image-Analysis-Application",
         color: "#F59E0B",
     },
@@ -113,7 +113,7 @@ export const projects: Project[] = [
         description:
             "Building agentic AI applications using CrewAI framework for multi-agent collaboration and task automation.",
         tags: ["python", "crewai", "multi-agent", "llm", "automation"],
-        image: "/images/project-display-images/project-management-system-display.png",
+        image: "/images/project-display-images/crewai-display.png",
         githubUrl: "https://github.com/rohitgarwad/crewai-agenticai",
         color: "#EC4899",
     },
@@ -124,7 +124,7 @@ export const projects: Project[] = [
         description:
             "Hybrid log classification system combining Regex, Sentence Transformers + Logistic Regression, and LLMs. Handles varying pattern complexities with FastAPI backend for real-time classification.",
         tags: ["python", "fastapi", "sentence-transformers", "logistic-regression", "llm", "ml"],
-        image: "/images/project-display-images/project-management-system-display.png",
+        image: "/images/project-display-images/log-classification-system-display.png",
         githubUrl: "https://github.com/rohitgarwad/Logs-Classification",
         color: "#6366F1",
     },
@@ -135,8 +135,8 @@ export const projects: Project[] = [
         description:
             "LLM-powered system that talks to MySQL database. Users ask questions in natural language, and the system converts them to SQL queries using Google Palm, LangChain, and few-shot learning.",
         tags: ["python", "langchain", "google-palm", "mysql", "streamlit", "chromadb", "few-shot"],
-        image: "/images/project-display-images/project-management-system-display.png",
-        githubUrl: "https://github.com/rohitgarwad/langchain",
+        image: "/images/project-display-images/atliq-database-qna-display.png",
+        githubUrl: "https://github.com/rohitgarwad/4_sqldb_tshirts",
         color: "#14B8A6",
     },
     {
@@ -146,8 +146,8 @@ export const projects: Project[] = [
         description:
             "News research tool for stock market insights. Load article URLs, process with LangChain, build FAISS vector index, and query with ChatGPT to get answers with source citations.",
         tags: ["python", "langchain", "openai", "faiss", "streamlit", "rag", "embeddings"],
-        image: "/images/project-display-images/project-management-system-display.png",
-        githubUrl: "https://github.com/rohitgarwad/langchain",
+        image: "/images/project-display-images/news-research-tool-display.png",
+        githubUrl: "https://github.com/rohitgarwad/2_news_research_tool_project",
         color: "#F97316",
     },
     {
@@ -157,7 +157,7 @@ export const projects: Project[] = [
         description:
             "End-to-end food ordering chatbot using Dialogflow for NLU, FastAPI backend, and MySQL database. Handles order placement, tracking, and inventory management through natural conversation.",
         tags: ["python", "dialogflow", "fastapi", "mysql", "nlp", "chatbot"],
-        image: "/images/project-display-images/project-management-system-display.png",
+        image: "/images/project-display-images/food-chatbot-display.png",
         githubUrl: "https://github.com/rohitgarwad/Food-Chatbot",
         color: "#EF4444",
     },

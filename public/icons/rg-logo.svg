@@ -1,0 +1,11 @@
+<svg width="120" height="100" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFA500"/>
+      <stop offset="100%" stop-color="#a72900"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Simple RG Text with overlapping/touching letters -->
+  <text x="8" y="72" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="bold" letter-spacing="-12" fill="url(#rgGradient)">RG</text>
+</svg>
